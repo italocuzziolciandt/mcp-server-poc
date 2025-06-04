@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { WeatherForecastService } from "./weather-forecast/service/weather-forecast.service.js";
+import { WeatherForecastService } from "./weather-forecast/services/weather-forecast.service.js";
 import { ForecastTool } from "./weather-forecast/tools/forecast.tool.js";
 import { AlertsTool } from "./weather-forecast/tools/alerts.tool.js";
 

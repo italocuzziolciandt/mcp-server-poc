@@ -1,6 +1,6 @@
 import z from "zod";
-import { WeatherForecastService } from "../service/weather-forecast.service.js";
-import { AlertsResponse, formatAlert } from "../service/models/alert.model.js";
+import { WeatherForecastService } from "../services/weather-forecast.service.js";
+import { AlertsResponse, formatAlert } from "../services/models/alert.model.js";
 import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 
 export class AlertsTool {

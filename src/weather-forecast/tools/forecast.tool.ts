@@ -1,7 +1,7 @@
 import { z } from "zod";
-import { WeatherForecastService } from "../service/weather-forecast.service.js";
-import { PointsResponse } from "../service/models/points.model.js";
-import { ForecastPeriod, ForecastResponse } from "../service/models/forecast.model.js";
+import { WeatherForecastService } from "../services/weather-forecast.service.js";
+import { PointsResponse } from "../services/models/points.model.js";
+import { ForecastPeriod, ForecastResponse } from "../services/models/forecast.model.js";
 import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 
 export class ForecastTool {
