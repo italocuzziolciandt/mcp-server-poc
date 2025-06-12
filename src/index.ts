@@ -3,6 +3,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { WeatherForecastService } from "./weather-forecast/services/weather-forecast.service.js";
 import { ForecastTool } from "./weather-forecast/tools/forecast.tool.js";
 import { AlertsTool } from "./weather-forecast/tools/alerts.tool.js";
+import { StudioCreationTool } from "./modernization-studio/tools/studio-creation.tool.js";
 
 const server = new McpServer({
   name: "mos-app",
@@ -16,6 +17,7 @@ const server = new McpServer({
 const weatherForecastService = new WeatherForecastService();
 const forecastTool = new ForecastTool(weatherForecastService);
 const alertstTool = new AlertsTool(weatherForecastService);
+const studioCreationTool = new StudioCreationTool();
 
 // Register weather tools
 server.tool(
@@ -30,6 +32,13 @@ server.tool(
   forecastTool.description,
   forecastTool.parameters,
   forecastTool.callback,
+);
+
+server.tool(
+  studioCreationTool.name,
+  studioCreationTool.description,
+  studioCreationTool.parameters,
+  studioCreationTool.callback,
 );
 
 async function main() {
